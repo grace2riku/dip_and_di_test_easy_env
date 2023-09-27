@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21.1)
-project (tdd_test)
+project (dip_and_di_test_easy_env)
 
 # Check for CppUTest and bail out if they don't have it
 if(DEFINED ENV{CPPUTEST_HOME})

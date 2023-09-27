@@ -1,6 +1,6 @@
 file(GLOB SOURCES 
 	"./*.c" "./*.cpp"
-	"hello/*.c" "hello/*.cpp"
+	"settingvalue_example/*.c" "settingvalue_example/*.cpp"
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
@@ -19,6 +19,6 @@ set_property(TARGET imp_libCppUTestExt PROPERTY
              IMPORTED_LOCATION $ENV{CPPUTEST_HOME}/lib/libCppUTestExt.a)
 
 target_link_libraries(${PROJECT_NAME} 
-    hello
+    settingvalue_example
     imp_cpputest imp_libCppUTestExt
     )
