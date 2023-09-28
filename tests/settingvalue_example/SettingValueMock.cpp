@@ -3,6 +3,9 @@
 #include <iostream>
 using namespace std;
 
+#include "CppUTest/TestHarness.h"
+#include "CppUTestExt/MockSupport.h"
+
 // コンストラクタの実装
 SettingValueMock::SettingValueMock() {
     cout << "SettingValueMock constructor" << endl;
@@ -16,5 +19,6 @@ void SettingValueMock::write() {
 }
 
 int SettingValueMock::read() {
-    return 100;
+    return mock().actualCall("read").returnIntValue();
+//    return 100;
 }
